@@ -11,7 +11,10 @@ open:
 
 setup: install-angular install-node-js version
 
-install-angular:
+install-brew:
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+install-angular: install-brew
 	brew install angular-cli
 
 install-node-js: mymovies-rc
